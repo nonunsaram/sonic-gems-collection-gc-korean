@@ -1,0 +1,43 @@
+{
+  "version": "1.0.0",
+  "frozen_on": "2026-10-05",
+  "status": "frozen",
+  "platform": "Nintendo GameCube",
+  "game_id": "G2XJ8P",
+  "region": "Japan",
+  "approval": "User explicitly requested freezing V3, GC-only distribution, xdelta creation and GitHub release publication.",
+  "source": {
+    "filename": "GCJP_RVZ_BASELINE.iso",
+    "bytes": 1459978240,
+    "sha256": "c3c0f44d746c6b483ac0df4ebc9e25978602e92e17fbee039e8d6130d4e061b4"
+  },
+  "target": {
+    "filename": "SONIC_GEMS_COLLECTION_GC_KOREAN_1.0.0.iso",
+    "bytes": 1459978240,
+    "sha256": "ab7e4a1a45de822c41e71febc89e70b0913f82fe96a74ed937a174bd2b8e2e9b"
+  },
+  "scope": {
+    "translated_text_entries": 2208,
+    "ui_label_entries": 50,
+    "korean_manuals": 5,
+    "in_game_manual_pages": 74,
+    "body_font": "LINE Seed KR Regular",
+    "ui_font": "LINE Seed KR Bold; ampersand Pretendard Bold 700"
+  },
+  "runtime": {
+    "user_confirmed_manuals": true,
+    "user_authorized_freeze": true,
+    "v3_ui_runtime_recheck_recorded": false,
+    "exhaustive_runtime_regression_claimed": false
+  },
+  "prior_builds_preserved": true,
+  "patch": {
+    "filename": "sonic-gems-collection-gc-korean-v1.0.0.xdelta",
+    "bytes": 28442079,
+    "sha256": "2dc5eb061b253d7913e0c42225f9a3678c8a7cbb1731e2db6f34ee29f673345c",
+    "xdelta_version": "3.2.1",
+    "legacy_header": true,
+    "roundtrip_sha256": "ab7e4a1a45de822c41e71febc89e70b0913f82fe96a74ed937a174bd2b8e2e9b",
+    "roundtrip_verified": true
+  }
+}

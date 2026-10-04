@@ -1,2 +1,42 @@
-# sonic-gems-collection-gc-korean
-소닉 젬스 컬렉션 일본판 GameCube 한국어 패치 · Korean translation patch for Sonic Gems Collection (Japan, GC)
+# 소닉 젬스 컬렉션 GC 한국어 패치 v1.0.0
+
+일본판 **Sonic Gems Collection (Nintendo GameCube)**용 비공식 한국어 패치입니다. 2026년 10월 5일 UI V3 통합본을 동결했습니다. 이번 배포는 **GC판 전용**입니다.
+
+## 적용 범위
+
+- 젬스 본문·안내·힌트·뮤지엄 및 소닉 CD 텍스트 총 2,208항목.
+- 게임·매뉴얼·뮤지엄 제목과 옵션 UI 이미지 50항목.
+- 한국어 매뉴얼 5종, 게임 내 이미지 총 74면: 소닉 더 파이터즈(10), 소닉 CD 메가 CD판(19), 소닉 CD PC판(13), 소닉 R 새턴판(17), 소닉 R PC판(15).
+- 힌트 항목 사이 줄간격, 메뉴 아이콘 옆 영문 잔상, 옵션 글자의 세로 위치 보정.
+- 본문 LINE Seed KR Regular, UI LINE Seed KR Bold 사용. 제목의 & 기호에는 Pretendard Bold를 사용했습니다.
+
+나머지 게임기어 매뉴얼 6종, 게임 로고·상단 영문 대제목·음악 고유 곡명 등은 원문을 유지합니다. 수록 게임 ROM 및 해금 조건은 변경하지 않았습니다. 메뉴에 남아 있는 미사용 제목을 번역했더라도 해당 게임이 추가되는 것은 아닙니다. 소닉 더 파이터즈 매뉴얼의 판독 불가 문단 한 곳은 원문을 유지했습니다.
+
+## 패치 적용 방법
+
+1. 보유한 **일본판 GC 원본 ISO(G2XJ8P)**를 준비하고 아래 크기와 SHA-256을 확인합니다.
+2. 원본이 RVZ라면 Dolphin에서 ISO로 변환한 뒤 해시를 확인합니다. RVZ 파일에 직접 패치하지 않습니다.
+3. 릴리스의 `.xdelta` 파일을 받아 xdelta3 또는 xdelta 호환 GUI 패처로 적용합니다.
+4. 결과 ISO의 SHA-256이 아래 적용 후 해시와 일치하는지 확인합니다.
+
+```text
+xdelta3 -d -s "Sonic Gems Collection (Japan).iso" "sonic-gems-collection-gc-korean-v1.0.0.xdelta" "SONIC_GEMS_COLLECTION_GC_KOREAN_1.0.0.iso"
+```
+
+GUI에서는 원본 ISO를 Source, `.xdelta`를 Patch, 새 ISO 경로를 Output으로 지정합니다. 기존 한국어 패치 ISO가 아닌 원본에 적용해야 합니다. PS2판·북미판·유럽판은 대상이 아닙니다. 원본 ISO 및 완성 ISO는 배포하지 않습니다.
+
+원본 및 적용 후 ISO 크기: **1,459,978,240바이트**.
+
+| 파일 | SHA-256 |
+| --- | --- |
+| 원본 ISO | `c3c0f44d746c6b483ac0df4ebc9e25978602e92e17fbee039e8d6130d4e061b4` |
+| v1.0.0 xdelta 패치 | `2dc5eb061b253d7913e0c42225f9a3678c8a7cbb1731e2db6f34ee29f673345c` |
+| 적용 후 ISO | `ab7e4a1a45de822c41e71febc89e70b0913f82fe96a74ed937a174bd2b8e2e9b` |
+
+## 검증
+
+원본 ISO에 패치를 다시 적용하여 동결본과 크기·SHA-256이 일치함을 확인했습니다(xdelta3 3.2.1). 본문 2,208항목의 누락·제어 코드·서식 토큰 검사, UI 압축 왕복·보호 영역 검사 및 DolphinTool 독립 추출 검증을 통과했습니다. 사용자 매뉴얼 실행 확인을 반영했습니다. 모든 게임·화면의 완전한 회귀 검증을 뜻하지 않으며, 마지막 UI 위치 보정 후의 별도 실행 재확인 기록은 없습니다.
+
+## 권리 및 글꼴
+
+Sonic 및 관련 게임·로고·원본 매뉴얼의 권리는 SEGA 및 각 권리자에게 있습니다. 비공식 팬 번역이며 SEGA의 공식 배포물이 아닙니다. 원본 콘텐츠를 별도로 재라이선스하지 않습니다. LINE Seed KR와 Pretendard 글꼴은 SIL Open Font License 1.1에 따라 제공되는 글꼴이며, 이번 배포에는 글꼴 파일 대신 게임용으로 렌더링된 이미지가 포함됩니다.
